@@ -1,18 +1,14 @@
 <template>
   <div id="app">
     <div class="container grid-xs py-2">
-      <img
-        class="img-responsive imgLogo"
-        src="@/assets/logo.png"
-        alt="logomarca"
-      />
+      <h1 class="logo">Todo</h1>
       <form @submit.prevent="addTodo(todo)">
         <div class="input-group">
           <input
             type="text"
             v-model="todo.description"
             class="form-input"
-            placeholder="Novo todo"
+            placeholder="Nova Tarefa"
           />
           <button class="btn btn-primary input-group-btn">Adicionar</button>
         </div>
@@ -68,9 +64,13 @@ export default {
 </script>
 
 <style scoped>
-.imgLogo {
-  max-width: 80px;
-  margin: 0 auto;
+#app {
+  height: 100vw;
+  background: #f9f9f9;
+}
+.logo {
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .todoList {

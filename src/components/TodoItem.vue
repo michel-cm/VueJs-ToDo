@@ -9,7 +9,7 @@
     <div class="tile-action">
       <button @click="$emit('toggle', todo)" class="btn btn-link">
         <span v-if="todo.checked">Desmarcar</span>
-        <span v-else> Concluído </span>
+        <span v-else> Concluir </span>
       </button>
       <button @click="$emit('remove', todo)" class="btn btn-link">
         <span class="text-error">Remover</span>
