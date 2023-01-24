@@ -19,28 +19,18 @@
       </form>
 
       <div class="todoList">
-        <div class="tile flex-centered" v-for="t in todos" :key="t.id">
-          <div class="tile-icon">
-            <i class="icon icon-time "></i>
-          </div>
-          <div class="tile-content">
-            <div class="tile-subtitle">{{ t.description }}</div>
-          </div>
-          <div class="tile-action">
-            <button class="btn btn-link">Concluído</button>
-            <button class="btn btn-link">
-              <span class="text-error">Remover</span>
-            </button>
-          </div>
-        </div>
+        <TodoItem v-for="t in todos" :key="t.id" :todo="t" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import TodoItem from "./components/TodoItem";
+
 export default {
   name: "App",
+  components: { TodoItem },
   data() {
     return {
       todos: [],
